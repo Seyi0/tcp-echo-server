@@ -1,4 +1,86 @@
-Creating a tcp echo server in GO
+# tcp-echo-server
 
-what is echo? sending the original message back to the server
+## Overview
 
+This repository contains a simple TCP echo server implemented in Go. While a detailed description was not initially provided, this server listens for incoming TCP connections, reads data from the client, and sends the same data back (echoes it). This serves as a foundational example for understanding network programming and TCP communication.
+
+## Key Features & Benefits
+
+*   **Basic TCP Echo Functionality:** Implements the core echo server behavior.
+*   **Go Language:** Written in Go, known for its efficiency and concurrency features.
+*   **Simple and Understandable:** Easy to comprehend and modify for learning purposes.
+*   **Foundation for Network Applications:** Can be extended for more complex network applications.
+
+## Prerequisites & Dependencies
+
+*   **Go:**  Go programming language version 1.16 or later must be installed. You can download it from [https://golang.org/dl/](https://golang.org/dl/).
+*   **Basic understanding of TCP protocol:** Familiarity with the concept of TCP connections and data transfer is helpful.
+
+## Installation & Setup Instructions
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/Seyi0/tcp-echo-server.git
+    cd tcp-echo-server
+    ```
+
+2.  **Build the executable:**
+
+    ```bash
+    go build main.go 
+    ```
+
+## Usage Examples
+
+1.  **Run the server:**
+
+    ```bash
+    go run main.go 9090
+    ```
+
+    By default, the server listens on port 8080. You can change this via command-line arguments (see Configuration Options).
+
+2.  **Connect to the server using `netcat` :**
+
+    ```bash
+    ncat localhost 8080
+    ```
+
+3.  **Type some text and press Enter. The server will echo the text back to you.**
+
+    ```
+    Hello, world!
+    Hello, world!
+    ```
+
+## Configuration Options
+
+The server can be configured via command-line arguments.  Currently, it supports setting the listening port:
+
+*   `-port`: Specifies the port number the server will listen on (default: 8080).
+
+**Example:**
+
+```bash
+./main -port 9000
+```
+
+This will start the server listening on port 9000.
+
+## Contributing Guidelines
+
+Contributions are welcome!  To contribute to this project, please follow these guidelines:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with clear, concise messages.
+4.  Submit a pull request to the `main` branch.
+
+Please ensure your code adheres to the Go coding standards.
+
+
+
+## Acknowledgments
+
+This project serves as a basic example of a TCP echo server implementation in Go, drawing upon fundamental networking concepts.
